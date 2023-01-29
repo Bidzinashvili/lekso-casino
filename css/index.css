@@ -430,7 +430,7 @@ body.active .sidebar {
 }
 
 .banner-info:hover::before {
-  display: block;
+  opacity: 1;
 }
 
 .banner-info::before {
@@ -442,7 +442,9 @@ body.active .sidebar {
   left: 50%;
   transform: translateX(-50%);
   width: max-content;
-  display: none;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  padding: 5px;
 }
 
 .banner-info span {
