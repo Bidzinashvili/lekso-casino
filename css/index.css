@@ -7,6 +7,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: #0e1117;
+}
+
 .container {
   margin: auto;
 }
@@ -29,7 +33,25 @@
 
 @media (max-width: 1440px) {
   .card-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 769px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 561px) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -38,10 +60,9 @@
   border-top-left-radius: 5px;
   width: 100%;
   height: 100%;
-  background-image: url("../assets/card-bg.jpeg");
+  background-image: url("../assets/card-bg.jpg");
   background-size: cover;
   background-position: center;
-  background-color: red;
 }
 
 .card button {
@@ -50,7 +71,7 @@
   color: white;
   font-weight: bold;
   border: none;
-  background-color: coral;
+  background-color: crimson;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -77,7 +98,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  background-color: rgba(39, 39, 39, 0.609);
+  background-color: #282a3e;
 }
 
 .banner-img {
@@ -102,7 +123,7 @@
   border: none;
   border-radius: 5px;
   padding: 5px 0;
-  background-color: rgba(39, 39, 39, 0.8);
+  background-color: #32354d;
 }
 
 .banner-price h2,
@@ -113,7 +134,7 @@
 .banner-button {
   padding: 10px 0;
   border: none;
-  background-color: coral;
+  background-color: crimson;
   color: white;
   font-weight: bold;
   font-size: 17px;
@@ -126,7 +147,7 @@
 }
 
 .banner-info span {
-  color: coral;
+  color: crimson;
   margin-right: 5px;
 }
 
