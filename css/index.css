@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  margin: auto;
+}
+
+.card {
+  width: 166px;
+  height: 260px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-grid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 20px;
+}
+
+@media (max-width: 1440px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+.card .card__bg {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/card-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-color: red;
+}
+
+.card button {
+  width: 100%;
+  padding: 10px 0;
+  color: white;
+  font-weight: bold;
+  border: none;
+  background-color: coral;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.banner-grid {
+  margin-top: 30px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+}
+
+@media (max-width: 1440px) {
+  .banner-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+.banner {
+  width: 350px;
+  border-radius: 12px;
+  height: 300px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: rgba(39, 39, 39, 0.609);
+}
+
+.banner-img {
+  width: 100%;
+  height: 6rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/banner-bg.png");
+  border-radius: 8px;
+}
+
+.banner-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.banner-price button {
+  flex: 1;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 0;
+  background-color: rgba(39, 39, 39, 0.8);
+}
+
+.banner-price h2,
+.banner-price p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.banner-button {
+  padding: 10px 0;
+  border: none;
+  background-color: coral;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  border-radius: 8px;
+}
+
+.banner-info {
+  margin: auto;
+  color: white;
+}
+
+.banner-info span {
+  color: coral;
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 25px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 900px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1240px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    width: 1240px;
+  }
+}
