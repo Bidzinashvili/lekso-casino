@@ -426,6 +426,23 @@ body.active .sidebar {
 .banner-info {
   margin: auto;
   color: white;
+  position: relative;
+}
+
+.banner-info:hover::before {
+  display: block;
+}
+
+.banner-info::before {
+  content: "TEST TEXT LOREM IPSUM";
+  text-align: center;
+  position: absolute;
+  background-color: #181a21;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  display: none;
 }
 
 .banner-info span {
