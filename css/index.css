@@ -127,7 +127,7 @@ body.active .sidebar {
 }
 
 .modal-info .buttons div p:nth-child(2) {
-  color: #181a21;
+  color: white;
   text-align: center;
 }
 
@@ -288,6 +288,8 @@ body.active .sidebar {
 }
 
 .card-grid {
+  column-gap: 10px;
+  row-gap: 10px;
   margin-top: 30px;
   display: grid;
   justify-items: center;
@@ -553,4 +555,47 @@ footer ul li a {
     flex-direction: column;
     gap: 40px;
   }
+}
+
+.winner-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  row-gap: 15px;
+  justify-items: center;
+}
+
+.winner {
+  display: flex;
+  width: 260px;
+  background-color: #282a3e;
+  padding: 15px 10px;
+  border-radius: 12px;
+  gap: 20px;
+  align-items: center;
+}
+
+.winner img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+}
+
+.winner .text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.winner .text h3 {
+  font-size: 15px;
+  font-weight: medium;
+}
+
+.winner .text h2 {
+  font-size: 15px;
+}
+.winner .text p {
+  font-size: 13px;
 }

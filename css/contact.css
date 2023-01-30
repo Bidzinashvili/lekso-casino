@@ -18,6 +18,11 @@ body {
   padding: 100px 0;
 }
 
+.form-img {
+  width: 425px;
+  height: 460px;
+}
+
 @media (max-width: 800px) {
   .form-img {
     display: none;
@@ -29,7 +34,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #272a3d;
-  width: 375px;
+  width: 425px;
   padding: 25px;
 }
 
