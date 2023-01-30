@@ -26,6 +26,7 @@ body.active .sidebar {
 }
 
 .modal {
+  z-index: 10;
   transition: all 300ms ease-in-out;
   width: 100%;
   height: 100vh;
@@ -278,75 +279,75 @@ body.active .sidebar {
   color: #5e2bff;
 }
 
-.card {
-  width: 160px;
-  height: 240px;
-  cursor: pointer;
-
-  display: flex;
-  flex-direction: column;
-}
-
-.card-grid {
-  margin-top: 30px;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(6, 1fr);
-  row-gap: 20px;
-}
-
-@media (max-width: 1440px) {
-  .card-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-@media (max-width: 991px) {
-  .card-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 769px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 561px) {
-  .card-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-.card .card__bg {
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  width: 100%;
-  height: 100%;
-  background-image: url("../assets/card-bg.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.card button {
-  width: 100%;
-  padding: 10px 0;
-  color: white;
-  font-weight: bold;
-  border: none;
-  background-color: #5e2bff;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  cursor: pointer;
-}
-
 .banner-grid {
   margin-top: 30px;
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 20px;
+}
+
+.card-grid {
+  margin-top: 30px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+  position: relative;
+  width: min-content;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.card:hover .card-hover {
+  opacity: 1;
+}
+
+.card .card-hover {
+  padding: 25px;
+  transition: all 300ms ease-in-out;
+  border-radius: 12px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.595);
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  opacity: 0;
+}
+
+.card .card-hover p {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card .card-hover .buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card-hover .buttons button {
+  width: 100%;
+  border: none;
+  padding: 8px 0;
+  background-color: #5e2bff;
+  color: white;
+  font-weight: bold;
+  margin: 10px 0;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 @media (max-width: 1440px) {
